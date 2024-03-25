@@ -1,55 +1,55 @@
-// // document.write("Keyed Collection");
-// //Keyed Collection -->collections of data which are indexed by a key; Map and Set.
+// document.write("Keyed Collection");
+//Keyed Collection -->collections of data which are indexed by a key; Map and Set.
 
 
-// //Map Object --> can iterate its elements in insertion order.
-//  const novels= new Map();
-//  novels.set("Variety","Atomic Habits");
-//  novels.set("Lolita","Little Women");
-//  novels.set("In Cold blood","A Tale of two cities");
+//Map Object --> can iterate its elements in insertion order.
+ const novels= new Map();
+ novels.set("Variety","Atomic Habits");
+ novels.set("Lolita","Little Women");
+ novels.set("In Cold blood","A Tale of two cities");
 
-// console.log( novels.size);// size 
+console.log( novels.size);// size 
 
-// console.log( novels.get("Lolita")); //
-// console.log( novels.get("Don Quixote"))
+console.log( novels.get("Lolita")); //
+console.log( novels.get("Don Quixote"))
 
-// console.log( novels.has("Variety")) // Returns True or False
-// console.log( novels.has("Quran"))
+console.log( novels.has("Variety")) // Returns True or False
+console.log( novels.has("Quran"))
  
-//  novels.delete("Little Women"); //Deletes "Little Women"
-//  novels.has("Little Women");
+ novels.delete("Little Women"); //Deletes "Little Women"
+ novels.has("Little Women");
 
-// for(const[key,value] in novels){
-//     console.log(`${key} and ${value}`);
-// }
-// console.log(novels);
-// console.log(novels.get("Quran"))
-// console.log(novels.get("In Cold blood"));
+for(const[key,value] in novels){
+    console.log(`${key} and ${value}`);
+}
+console.log(novels);
+console.log(novels.get("Quran"))
+console.log(novels.get("In Cold blood"));
 
-// novels.clear(); 
-// novels.size;
-// console.log(novels);
+novels.clear(); 
+novels.size;
+console.log(novels);
 
 
-// //Weakmap  --> used to store private date for an object
+//Weakmap  --> used to store private date for an object
 
-// const privates= new WeakMap();
-// function public(){
-//     const me={
-//         name:"Bilan",
-//         surname:"Bilal",
-//         category:"Confidential",
-//         address:"Tazikstan"
+const privates= new WeakMap();
+function public(){
+    const me={
+        name:"Bilan",
+        surname:"Bilal",
+        category:"Confidential",
+        address:"Tazikstan"
 
-//     }
-//     privates.set(this,me);
-// }
+    }
+    privates.set(this,me);
+}
 
-// public.prototype.method = function () {
-//     const me = privates.get(this);
+public.prototype.method = function () {
+    const me = privates.get(this);
   
-//   };
-// module.exports = public;
+  };
+module.exports = public;
 
 
 //SET ==> stores unique value
